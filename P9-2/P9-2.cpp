@@ -28,9 +28,16 @@ int main() {
 	else {
 		cout << "The data are not decreasing" << endl;
 	}
+
+	if (hasAdjecentDuplicates(values, SIZE)) { // checks if there are adjacent duplicate
+		cout << "The data has adjacent duplicates" << endl;
+	}
+	else {
+		cout << "The data does not have adjacent duplicates" << endl;
+	}
 }
 
-// fuction no1
+// fucntion no1
 bool isSortedIncreasing(int values[], int size) {
 	for (int j = 0; j < size - 1; j++) { // checking every values
 		if (values[j] > values[j + 1]) {
@@ -40,7 +47,7 @@ bool isSortedIncreasing(int values[], int size) {
 	return true;
 }
 
-// fuction no2
+// function no2
 bool isSortedDecreasing(int values[], int size) {
 	for (int k = 0; k < size - 1; k++) { // checking values
 		if (values[k] < values[k + 1]) { // opposite of increasing
@@ -48,4 +55,14 @@ bool isSortedDecreasing(int values[], int size) {
 		}
 	} // if never triggered, then
 	return true;
+}
+
+// fnuction no3
+bool hasAdjecentDuplicates(int values[], int size) {
+	for (int l = 0; l < size - 1; l++) {
+		if (values[l] == values[l + 1]) {
+			return true;
+		}
+	}
+	return false;
 }
