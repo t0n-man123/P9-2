@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 // atherton Bunner; functionakl arrays
-
+// teh functions in da future
 bool isSortedIncreasing(int values[], int size);
 bool isSortedDecreasing(int values[], int size);
 bool hasAdjecentDuplicates(int values[], int size);
@@ -18,7 +18,7 @@ int main() {
 	if (isSortedIncreasing(values, SIZE)) { // checks if increasing
 		cout << "The data are increasing" << endl;
 	}
-	else {
+	else { // good ggramamamer
 		cout << "The data are not increasing" << endl;
 	}
 
