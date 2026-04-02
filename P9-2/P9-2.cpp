@@ -35,6 +35,13 @@ int main() {
 	else {
 		cout << "The data does not have adjacent duplicates" << endl;
 	}
+
+	if (hasDuplicates(values, SIZE)) {
+		cout << "The data has duplicates" << endl;
+	}
+	else {
+		cout << "The data does not have duplicates" << endl;
+	}
 }
 
 // fucntion no1
@@ -62,6 +69,18 @@ bool hasAdjecentDuplicates(int values[], int size) {
 	for (int l = 0; l < size - 1; l++) {
 		if (values[l] == values[l + 1]) {
 			return true;
+		}
+	}
+	return false;
+}
+
+// nfuction no4
+bool hasDuplicates(int values[], int size) {
+	for (int i = 0; i < size; i++) {
+		for (int j = i + 1; j < size; j++) {
+			if (values[i] == values[j]) {
+				return true;
+			}
 		}
 	}
 	return false;
